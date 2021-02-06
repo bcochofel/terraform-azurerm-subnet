@@ -6,7 +6,7 @@ module "rg" {
   source  = "bcochofel/resource-group/azurerm"
   version = "1.2.0"
 
-  name     = "rg-vnet-basic-example"
+  name     = "rg-snet-basic-example"
   location = "North Europe"
 }
 
@@ -27,5 +27,5 @@ module "snet" {
   name                 = "snet-basic-example"
   resource_group_name  = module.rg.name
   virtual_network_name = module.vnet.name
-  address_prefixes     = ["10.0.0.0/8"]
+  address_prefixes     = ["10.0.0.0/24"]
 }

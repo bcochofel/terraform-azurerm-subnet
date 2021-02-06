@@ -73,5 +73,5 @@ EOT
 variable "service_endpoint_policy_ids" {
   description = "The list of IDs of Service Endpoint Policies to associate with the subnet."
   type        = list(string)
-  default     = []
+  default     = null
 }
