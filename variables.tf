@@ -54,7 +54,7 @@ EOT
 
 variable "service_endpoints" {
   description = <<EOT
-The list of Service endpoints to associate with the subnet. 
+The list of Service endpoints to associate with the subnet.
 Possible values include:
 * Microsoft.AzureActiveDirectory
 * Microsoft.AzureCosmosDB
