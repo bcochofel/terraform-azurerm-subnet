@@ -1,6 +1,8 @@
 # terraform-azurerm-subnet
 
-Terraform module to create Azure Subnet
+Terraform module to create Azure Subnet.
+
+This module doesn't implement `service delegation`.
 
 # Usage
 
@@ -19,3 +21,5 @@ go test -v
 ```
 
 # References
+
+* [Terraform azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
