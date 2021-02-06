@@ -6,6 +6,7 @@
 <a name="0.2.0"></a>
 ## [0.2.0] - 2021-02-06
 ### Feat
+- more examples
 - first release
 
 ### Fix
