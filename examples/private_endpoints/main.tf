@@ -6,7 +6,7 @@ module "rg" {
   source  = "bcochofel/resource-group/azurerm"
   version = "1.2.0"
 
-  name     = "rg-snet-basic-example"
+  name     = "rg-snet-private-endpoints-example"
   location = "North Europe"
 }
 
@@ -15,7 +15,7 @@ module "vnet" {
   version = "1.1.2"
 
   resource_group_name = module.rg.name
-  name                = "vnet-basic-example"
+  name                = "vnet-private-endpoints-example"
   address_space       = ["10.0.0.0/16"]
 
   depends_on = [module.rg]
@@ -24,8 +24,10 @@ module "vnet" {
 module "snet" {
   source = "../.."
 
-  name                 = "snet-basic-example"
+  name                 = "snet-private-endoints-example"
   resource_group_name  = module.rg.name
   virtual_network_name = module.vnet.name
   address_prefixes     = ["10.0.0.0/24"]
+
+  enforce_private_link_endpoint_network_policies = true
 }
