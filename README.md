@@ -4,7 +4,7 @@ Terraform module to create Azure Subnet.
 
 This module doesn't implement `service delegation`.
 
-# Usage
+## Usage
 
 ```hcl:examples/basic/main.tf
 provider "azurerm" {
@@ -42,6 +42,7 @@ module "snet" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 
 ## Requirements
 
@@ -83,13 +84,13 @@ module "snet" {
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
-# Run tests
+## Run tests
 
 ```bash
 cd test/
 go test -v
 ```
 
-# References
+## References
 
 * [Terraform azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
