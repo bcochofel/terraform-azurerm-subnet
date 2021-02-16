@@ -42,8 +42,6 @@ module "snet" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
-
 ## Requirements
 
 | Name | Version |
@@ -56,6 +54,16 @@ module "snet" {
 | Name | Version |
 |------|---------|
 | azurerm | >= 2.41.0 |
+
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/2.41.0/docs/resources/subnet) |
 
 ## Inputs
 
@@ -80,7 +88,6 @@ module "snet" {
 | name | Subnet name. |
 | resource\_group\_name | Resource Group name in which the subnet is created in. |
 | virtual\_network\_name | The name of the virtual network in which the subnet is created in. |
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
