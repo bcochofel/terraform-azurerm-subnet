@@ -12,7 +12,7 @@ module "rg" {
 
 module "vnet" {
   source  = "bcochofel/virtual-network/azurerm"
-  version = "1.2.0"
+  version = "1.2.1"
 
   resource_group_name = module.rg.name
   name                = "vnet-basic-example"
