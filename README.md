@@ -14,7 +14,7 @@ provider "azurerm" {
 
 module "rg" {
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.2.0"
+  version = "1.4.0"
 
   name     = "rg-snet-basic-example"
   location = "North Europe"
@@ -22,7 +22,7 @@ module "rg" {
 
 module "vnet" {
   source  = "bcochofel/virtual-network/azurerm"
-  version = "1.1.2"
+  version = "1.2.0"
 
   resource_group_name = module.rg.name
   name                = "vnet-basic-example"
@@ -43,6 +43,7 @@ module "snet" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
