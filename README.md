@@ -3,6 +3,7 @@
 Terraform module to create Azure Subnet.
 
 This module doesn't implement `service delegation`.
+This module also validates the name according to the Azure Resource naming restrictions.
 
 ## Usage
 
@@ -13,7 +14,7 @@ provider "azurerm" {
 
 module "rg" {
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.2.0"
+  version = "1.4.0"
 
   name     = "rg-snet-basic-example"
   location = "North Europe"
@@ -21,7 +22,7 @@ module "rg" {
 
 module "vnet" {
   source  = "bcochofel/virtual-network/azurerm"
-  version = "1.1.2"
+  version = "1.2.0"
 
   resource_group_name = module.rg.name
   name                = "vnet-basic-example"
@@ -47,7 +48,7 @@ module "snet" {
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.20 |
+| terraform | >= 0.13.0 |
 | azurerm | >= 2.41.0 |
 
 ## Providers
@@ -101,4 +102,5 @@ go test -v
 
 ## References
 
+* [Azure Resource naming restrictions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
 * [Terraform azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
