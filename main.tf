@@ -9,4 +9,6 @@ resource "azurerm_subnet" "snet" {
 
   service_endpoints           = var.service_endpoints
   service_endpoint_policy_ids = var.service_endpoint_policy_ids
+
+  tags = var.tags
 }
