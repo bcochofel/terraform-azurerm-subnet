@@ -3,10 +3,25 @@
 ## [Unreleased]
 
 
+<a name="1.4.0"></a>
+## [1.4.0] - 2021-03-21
+### Feat
+- **tags:** add tags
+
+
+<a name="1.3.1"></a>
+## [1.3.1] - 2021-02-24
+### Docs
+- update documentation and hooks
+
+
 <a name="1.3.0"></a>
 ## [1.3.0] - 2021-02-17
 ### Feat
 - bump virtual network module for examples
+
+### Pull Requests
+- Merge pull request [#5](https://github.com/bcochofel/terraform-azurerm-subnet/issues/5) from bcochofel/bump_vnet
 
 
 <a name="1.2.0"></a>
@@ -61,7 +76,9 @@
 <a name="0.1.0"></a>
 ## 0.1.0 - 2021-02-06
 
-[Unreleased]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.3.0...HEAD
+[Unreleased]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.4.0...HEAD
+[1.4.0]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.3.1...1.4.0
+[1.3.1]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.3.0...1.3.1
 [1.3.0]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.2.0...1.3.0
 [1.2.0]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.1.2...1.2.0
 [1.1.2]: https://github.com/bcochofel/terraform-azurerm-subnet/compare/1.1.1...1.1.2
