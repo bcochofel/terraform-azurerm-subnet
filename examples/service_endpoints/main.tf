@@ -26,10 +26,12 @@ module "vnet" {
 module "snet" {
   source = "../.."
 
-  name                 = "snet-service-endpoints-example"
-  resource_group_name  = module.rg.name
-  virtual_network_name = module.vnet.name
-  address_prefixes     = ["10.0.0.0/24"]
+  name                    = "snet-service-endpoints-example"
+  resource_group_name     = module.rg.name
+  resource_group_location = module.rg.location
+  nsg_name                = "nsg-service-endpoints-example"
+  virtual_network_name    = module.vnet.name
+  address_prefixes        = ["10.0.0.0/24"]
 
   service_endpoints = [
     "Microsoft.Storage",

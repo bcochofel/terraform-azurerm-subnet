@@ -25,6 +25,21 @@ EOT
   type        = string
 }
 
+variable "resource_group_location" {
+  description = <<EOT
+The location of the resource group in which to create the subnet.
+The Resource Group must already exist.
+EOT
+  type        = string
+}
+
+variable "nsg_name" {
+  description = <<EOT
+Network Security Group name.
+EOT
+  type        = string
+}
+
 variable "virtual_network_name" {
   description = <<EOT
 The name of the virtual network to which to attach the subnet.
@@ -37,24 +52,6 @@ variable "address_prefixes" {
   description = "The address prefixes to use for the subnet."
   type        = list(string)
   default     = []
-}
-
-variable "enforce_private_link_endpoint_network_policies" {
-  description = <<EOT
-Enable or Disable network policies for the private link endpoint on the subnet.
-Conflicts with enforce_private_link_service_network_policies.
-EOT
-  type        = bool
-  default     = false
-}
-
-variable "enforce_private_link_service_network_policies" {
-  description = <<EOT
-Enable or Disable network policies for the private link service on the subnet.
-Conflicts with enforce_private_link_endpoint_network_policies.
-EOT
-  type        = bool
-  default     = false
 }
 
 variable "service_endpoints" {
