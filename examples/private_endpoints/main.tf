@@ -3,16 +3,18 @@ provider "azurerm" {
 }
 
 module "rg" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.4.0"
+  version = "1.6.0"
 
   name     = "rg-snet-private-endpoints-example"
   location = "North Europe"
 }
 
 module "vnet" {
+  #checkov:skip=CKV_TF_1:Ensure Terraform module sources use a commit hash
   source  = "bcochofel/virtual-network/azurerm"
-  version = "1.2.1"
+  version = "1.3.0"
 
   resource_group_name = module.rg.name
   name                = "vnet-private-endpoints-example"
