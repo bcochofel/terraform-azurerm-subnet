@@ -26,8 +26,10 @@ module "vnet" {
 module "snet" {
   source = "../.."
 
-  name                 = "snet-basic-example"
-  resource_group_name  = module.rg.name
-  virtual_network_name = module.vnet.name
-  address_prefixes     = ["10.0.0.0/24"]
+  name                    = "snet-basic-example"
+  resource_group_name     = module.rg.name
+  resource_group_location = module.rg.location
+  nsg_name                = "nsg-basic-example"
+  virtual_network_name    = module.vnet.name
+  address_prefixes        = ["10.0.0.0/24"]
 }
